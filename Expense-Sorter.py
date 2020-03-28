@@ -5,8 +5,8 @@ fast_food = ['TACO', 'PAPA', 'DUNKIN', 'MCDONALD', 'YANGS', 'BURGER', 'STARBUCKS
 totalSpent=0
 
 for i in range(0, len(lines)):
-  if (0, len(fast_food[i])):
-      for i in range (0, len(lines[i])):
+  for j in range(0, len(fast_food)):
+      if (fast_food[j] in lines[i]):
           tempStr=lines[i][(int(lines[i].find('$'))+1):(int(lines[i].find(')'))-1)]
           totalSpent += float(tempStr)
 print(totalSpent)
