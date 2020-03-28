@@ -1,9 +1,9 @@
 text_file = open(r"transactions.csv", "r")
 lines = text_file.read().split('\n')
 
-fast_food = ['TACO', 'PAPA', 'DUNKIN', 'SONIC', 'MCDONALD', 'YANGS', 'BURGER', 'STARBUCKS', 'CHINA', 'LYNDON', 'IHOP', 'PIZZA']
-stores = ['MARSHALLS','AMAZON', 'DOLLAR', 'GOODWILL']
-Makeup = ['KYLIE', ' MERCARI', 'BEAUTY']
+fast_food = ['TACO', 'PAPA', 'DUNKIN', 'SONIC', 'MCDONALD', 'YANGS', 'BURGER', 'STARBUCKS', 'CHINA', 'LYNDON', 'IHOP', 'PIZZA', 'COUSINS', 'EVANS']
+stores = ['MARSHALLS','AMAZON', 'DOLLAR', 'GOODWILL', 'FYE']
+Makeup = ['KYLIE', ' MERCARI', 'BEAUTY', 'COLOURPOP', 'MAC', "THE COSMETICS CO"]
 
 fast_food_spent=0
 stores_spent = 0
