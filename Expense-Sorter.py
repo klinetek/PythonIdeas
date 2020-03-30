@@ -1,3 +1,5 @@
+import timeit
+
 text_file = open(r"transactions.csv", "r")
 lines = text_file.read().split('\n')
 
@@ -29,3 +31,36 @@ for i in range(0, len(lines)):
           tempStr=lines[i][(int(lines[i].find('$'))+1):(int(lines[i].find(')'))-1)]
           MakeupSpent += float(tempStr)
 print("Makeup " + str(MakeupSpent))
+#break
+print("\tKyles Version ======================================================<3")
+#this version is harder on RAM because of all the splits
+
+text_file = open(r"transactions_2019.csv", "r")
+lines = text_file.read().split('\n')
+
+#def kyleIsAwsome():
+nlist = ["TACO,PAPA,DUNKIN,SONIC,MCDONALD,YANGS,BURGER,STARBUCKS,CHINA,LYNDON,IHOP,PIZZA,COUSINS,EVANS","MARSHALLS,AMAZON,DOLLAR,GOODWILL,FYE","KYLIE,MERCARI,BEAUTY,COLOURPOP,MAC,THECOSMETICSCO"]
+fast_food_spent=0
+stores_spent = 0
+MakeupSpent = 0
+
+for i in range(0, len(lines)):
+    for j in range(0, len(nlist)):
+        tempList = nlist[j].split(',')
+        for k in range(0,len(tempList)):
+            if (tempList[k] in lines[i]):
+                tempStr=lines[i][(int(lines[i].find('$'))+1):(int(lines[i].find(')'))-1)]
+                if(j==0):
+                    fast_food_spent += float(tempStr)
+                elif(j==1):
+                    stores_spent += float(tempStr)
+                else:
+                    MakeupSpent += float(tempStr)
+print("Fast Food " + str(fast_food_spent))
+print("Stores " + str(stores_spent))
+print("Makeup " + str(MakeupSpent))
+#def main():
+    #timeit.timeit(kyleIsAwsome, 100)
+
+#if __name__ == "__main__":
+    #main()
