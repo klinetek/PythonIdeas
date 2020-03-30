@@ -35,7 +35,7 @@ print("Makeup " + str(MakeupSpent))
 print("\tKyles Version ======================================================<3")
 #this version is harder on RAM because of all the splits
 
-text_file = open(r"transactions_2019.csv", "r")
+text_file = open(r"transactions.csv", "r")
 lines = text_file.read().split('\n')
 
 #def kyleIsAwsome():
